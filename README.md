@@ -15,7 +15,7 @@ a keymap set, but you don't want to change your Neovim config or worry about
 different keymaps for different projects.
 
 With Quick Run you set the command to run, then use the predefined keymap
-(*default <F5>*) to run it whenever you want.
+(*default \<F5\>*) to run it whenever you want.
 
 ## Installation
 Using [lazy.nvim](https://github.com/folke/lazy.nvim):
