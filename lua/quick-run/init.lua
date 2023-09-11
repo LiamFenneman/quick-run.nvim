@@ -51,12 +51,18 @@ function M.setup(cfg)
     vim.api.nvim_create_user_command('QuickRun', M.set_cmd, { nargs = '?' })
 end
 
--- Set command to run.
+--- Set command to run.
+--- If the `opts.args` is nil or empty string, print the current command.
+--- Otherwise, set the command to `opts.args`.
 function M.set_cmd(opts)
-    state.cmd = opts.args or state.cmd
+    if opts.args == nil or opts.args == '' then
+        print(state.cmd)
+    else
+        state.cmd = opts.args
+    end
 end
 
--- Run the command previously set or the default command.
+--- Run the command previously set or the default command.
 function M.run()
     local job = vim.fn.jobstart(state.cmd, {
         on_stdout = config.callbacks.on_stdout,
