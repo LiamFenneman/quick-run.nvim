@@ -18,6 +18,11 @@ With Quick Run you set the command to run, then use the predefined keymap
 (*default <F5>*) to run it whenever you want.
 
 ## Installation
+Using [lazy.nvim](https://github.com/folke/lazy.nvim):
+```lua
+{ 'LiamFenneman/quick-run.nvim', opts = {} },
+```
+
 Using [packer](https://github.com/wbthomason/packer.nvim):
 ```lua
 use 'LiamFenneman/quick-run.nvim'
